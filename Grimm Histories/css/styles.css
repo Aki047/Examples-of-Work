@@ -1,0 +1,453 @@
+/*CSS Styling*/
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url(../images/dark_background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 100%;
+    font-family: 'Playfair Display', serif;
+    color:silver;
+    font-size-adjust: auto;
+}
+#container{
+     background:black; 
+}
+
+#wrapper{
+    width:80%;
+    max-width: 1200px;
+    margin:0 auto 20px auto;
+   background: rgba(12, 12, 12, 0.9);
+    overflow: hidden;
+    padding: 20px;
+}
+#banner{
+ background: rgba(12, 12, 12, 0.9);  
+    padding: 20px 0 20px 0;
+    margin-bottom: 15px;
+}
+/*****************Navigation*******************/
+nav {
+	height: 52px;
+    line-height: 52px;
+    border-top: white solid 1px;
+    border-bottom: white solid 1px;
+    
+}
+nav ul {
+	padding: 0;
+    margin: 0;
+	list-style: none;
+    width:80%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+	}	
+nav ul li {
+    float:left;	
+    width: 25%;
+    text-align: center;
+    position:relative;
+    
+}
+nav a {
+    text-decoration: none;
+    font-family: 'norseregular';
+    color: white;
+    display: block;
+}
+nav a:hover { 
+   background:silver;
+    color: black;
+   
+}
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 52px; 	
+}	
+nav ul li:hover > ul {
+	display:block;
+    width:100%;
+    float: none;
+}	
+
+nav ul ul li {
+	border: 1px solid white;
+    width: 100%;
+    background: rgba(12, 12, 12, 0.9);
+}	
+/***********End of Navigation*************/
+
+
+.home nav li:nth-child(1) a,
+.about nav li:nth-child(2) a,
+.public_speaking nav li:nth-child(3) a,
+.local_resources nav li:nth-child(4) a{
+    background: silver;
+}
+
+main{
+    margin: auto;
+    border-top: 8px ridge silver;
+    border-bottom: 8px ridge silver;
+    padding-bottom: 2.82%;
+    padding-top: 2.82%;
+    padding-right: 10.82%;
+    padding-left: 10.82%;
+    height: 100%;
+    overflow: hidden;
+}
+
+main ul{
+    margin-left:20px;
+}
+main li{
+    font-size: 145%;
+}
+aside{
+    float:right;
+    max-width: 30%;
+}
+
+figure{
+    margin-top: 5%;
+     margin-bottom: 5%;
+}
+figcaption{
+    font-size: 1em;
+    font-style:italic;
+    text-align: center;
+}
+.containter{
+    clear: both;
+    overflow: hidden;
+    
+}
+
+.third{
+    width:31.91%;
+    float: left;
+}
+.third:nth-child(1),
+.third:nth-child(2){
+margin-right: 2.12%;
+}
+.third:nth-child(3),{
+margin-left: 2.12%;
+}
+.third img{
+    display: block;
+    margin-left: auto;
+  margin-right: auto;
+    max-width:60%;
+}
+
+.logo1{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top;5px;   
+}
+.signature{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  padding-top: 3%;
+    clear: both
+
+}
+.right{
+    float:right;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    clear:both;
+
+}
+.left{
+    float:left;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    clear:both;
+}
+
+
+footer ul{
+    list-style-type: none;
+}
+footer li{
+    float:left;
+    margin-right: 30px;
+}
+
+footer{
+    height:50px;
+    clear: both;
+    line-height:50px;
+    border-top: 1px dotted #666;
+}
+/***********Lightbox*************/
+.row > .column {
+  padding: 0 8px;
+    cursor: pointer;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+  display: block;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/***********Form*************/
+form{
+    max-width: 40%;
+    margin-right:auto;
+    float: left;
+    
+}
+
+label{
+    margin-bottom: 5px;
+    display: block;
+}
+
+fieldset{
+    padding:10px;
+}
+
+input{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 25px;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+input[type=submit]{
+    text-transform: uppercase;
+   padding: 10px;
+   color: white;
+   background: #444;
+   font-weight: normal;
+    height: auto;
+}
+
+textarea{
+    margin-bottom: 10px;
+    width: 540px;
+    height: 100px;
+}
+
+legend{
+    text-align: center;
+    font-size:2em;
+    font-style:italic;
+    padding:4px;
+    color:darkgray;
+}
+select{
+    margin-bottom: 10px;
+}
+form ul{
+    list-style-type: none;
+    margin-left: 10px;
+     margin-bottom: 10px;
+}
+form li{
+    list-style-type: none;
+}
+/***********Typography*************/
+
+@font-face {
+    font-family: 'norsebold';
+    src: url('../font/norse-bold-webfont.woff2') format('woff2'),
+         url('../font/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'norseregular';
+    src: url('../font/norse-webfont.woff2') format('woff2'),
+         url('../font/norse-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'odinson_lightlight';
+    src: url('../font/odinsonlight-vmzd-webfont.woff2') format('woff2'),
+         url('../font/odinsonlight-vmzd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1, h2, h3{
+    line-height:1.18em;
+    margin-top: 1em;
+    margin-bottom:.8em;
+}
+
+h1{
+    font-size: 3.658em;
+    font-family: 'norsebold';
+    text-align: center;
+}
+h2{
+    font-size: 3.012em;
+     font-family: 'norseregular';
+       text-align: left;
+}
+h3{
+    font-size: 2.479em;
+    font-family: 'norseregular';
+     text-align: left;
+}
+p{
+    margin-bottom:20px;
+    font-size: 1em;
+    line-height: 2em;
+    padding: 10px;
+}
+.third h3{
+    text-align: center;
+   
+}
+nav a{
+    font-size: 2.33em;
+}
+main li  {
+    font-size-adjust: auto;
+}  
